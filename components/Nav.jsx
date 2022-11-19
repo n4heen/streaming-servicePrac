@@ -1,11 +1,12 @@
 import React from 'react'
+import requests from '../utils/requests'
 
 export default function Nav() {
   return (
-  <nav>
-    <div>
-        
-    </div>
-  </nav>
+    <nav>
+      <div>
+        {Object.entries(requests).map(([key, { title, url }]))}
+      </div>
+    </nav>
   )
 }
